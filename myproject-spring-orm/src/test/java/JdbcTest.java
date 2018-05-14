@@ -53,7 +53,7 @@ public class JdbcTest {
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            Map<String,String> columnMap = new HashMap<>();
+            Map<String,String> columnMap = new HashMap<String,String>();
 
 
             //获取所有实体,为标注忽略Transient注解,标注Column注解的属性名称,与数据库字段名称对应关系
