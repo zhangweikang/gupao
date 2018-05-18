@@ -31,6 +31,7 @@ public class JDKMeipo implements InvocationHandler{
 
         Object invoke = method.invoke(person, args);
 
+
         System.out.println(" 准备办事 ");
 
         return invoke;
