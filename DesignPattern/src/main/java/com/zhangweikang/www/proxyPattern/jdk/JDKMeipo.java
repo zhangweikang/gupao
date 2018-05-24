@@ -29,7 +29,7 @@ public class JDKMeipo implements InvocationHandler{
         System.out.println("我是媒婆");
         System.out.println(" 已经接到你的需求 ");
 
-        Object invoke = method.invoke(person, args);
+        Object invoke = method.invoke(proxy, args);
 
 
         System.out.println(" 准备办事 ");
