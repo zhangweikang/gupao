@@ -21,13 +21,21 @@ import io.protostuff.runtime.RuntimeSchema;
  * 2.利用T-L-V(Tag-Length-Value)存储
  *  tag:标示字段
  *      其中包含两个字段:
- *      field_number:标示
+ *      field_number:标示,字段.id=后的数字,如果不指定将会随机生成
  *      wire_type:字段类型
  *  Tag  = (field_number << 3) | wire_type
  *      理论上来讲,两个标示会需要占用2个字节
+ *      1.一个字节表示tag,field_number范围1-15
  *      但是wire_type总共有5种类型,也就是0-5,二进制,只会占用3个byte位
  *      field_number二进制位移不会影响结果,
  *      所以将field_number<<3,后面3位由wire_type的3位填充,节约空间
+ *      2.两个字节表示Tag,field_number范围16-2047
+ *      10000000 00000000
+ *      第一个字节的最高位和第二个字节的最高位为标志位
+ *      第一个字节的最高位 一定为1
+ *      第二个字节的最高位 一定为0
+ *
+ *      剔除两个标志位,最后的3位位移位,还剩下11位,也就是最高2047
  *  length:数据长队
  *      通过varint&zigzag编码的存储方式没有length这一列
  *  value:编码后的值
