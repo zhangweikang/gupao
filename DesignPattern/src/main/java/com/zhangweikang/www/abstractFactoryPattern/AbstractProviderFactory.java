@@ -8,7 +8,6 @@ package com.zhangweikang.www.abstractFactoryPattern;
  */
 public class AbstractProviderFactory {
 
-    1111
     public Sender getMailSender(){
         return new MailSendFactory().product();
     }
