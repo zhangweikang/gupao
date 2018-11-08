@@ -1,0 +1,18 @@
+package my.project.cloud;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
+/**
+ * Hello world!
+ */
+@SpringCloudApplication
+@EnableScheduling
+@EnableHystrixDashboard
+public class SpringCloudZookeeperClient {
+    public static void main(String[] args) {
+        SpringApplication.run(SpringCloudZookeeperClient.class,args);
+    }
+}

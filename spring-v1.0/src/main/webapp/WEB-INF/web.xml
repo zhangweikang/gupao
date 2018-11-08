@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="freemarker" version="2.5">
+
+    <display-name>spring-v1.0</display-name>
+
+    <!-- 配置SpringMVC -->
+    <servlet>
+        <servlet-name>spring-v1.0</servlet-name>
+        <servlet-class>my.spring.servlet.DispatcherServlet</servlet-class>
+        <!-- 自定义SpringMVC的配置文件路径 -->
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:application.properties</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>spring-v1.0</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>
