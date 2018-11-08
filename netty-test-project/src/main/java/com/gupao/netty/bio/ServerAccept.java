@@ -1,4 +1,4 @@
-package com.gupao.netty.bioIMessage;
+package com.gupao.netty.bio;
 
 import java.io.BufferedReader;
 import java.io.IOException;

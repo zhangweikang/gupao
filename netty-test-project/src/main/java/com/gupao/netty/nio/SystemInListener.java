@@ -1,4 +1,4 @@
-package com.gupao.netty.nioIMeaagae;
+package com.gupao.netty.nio;
 
 import java.io.BufferedReader;
 import java.io.IOException;
