@@ -7,7 +7,7 @@ package com.zhangweikang.www.abstractFactoryPattern;
  * @create 2018/5/16
  */
 public class AbstractProviderFactory {
-
+111111
     public Sender getMailSender(){
         return new MailSendFactory().product();
     }
