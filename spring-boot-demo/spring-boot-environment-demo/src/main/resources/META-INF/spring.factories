@@ -1,0 +1,2 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+my.project.cloud.spring.cloud.configuration.demo.config.MyEnvironmentPostProcessor
