@@ -16,6 +16,8 @@
         <module>spring-cloud-eureka-registry</module>
         <module>spring-cloud-feign-demo</module>
         <module>spring-cloud-zuul-demo</module>
+        <module>spring-cloud-bus-test</module>
+        <module>spring-cloud-stream-test</module>
     </modules>
     <packaging>pom</packaging>
 
