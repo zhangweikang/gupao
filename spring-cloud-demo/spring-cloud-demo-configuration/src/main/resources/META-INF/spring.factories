@@ -1,0 +1,2 @@
+# org.springframework.cloud.bootstrap.BootstrapConfiguration=\
+my.project.cloud.spring.cloud.demo.configuration.config.MyConfiguration
